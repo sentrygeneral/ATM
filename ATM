@@ -1,0 +1,72 @@
+#from ast import Global
+
+
+data1='10203040'
+data12='90807060'
+data2='123'
+data21='789'
+card_no='0'
+password='0'
+'''newcard='0'
+newpass='0'
+newbal='0'''
+card_no=input('enter card number')
+password=input('enter password')
+
+'''cardcreate=option=input('What process are you using?:\n 1.Register Card\n 2.Use Card')
+if option==2:
+    card_no=input('enter card number')
+    password=input('enter password')
+elif option==1:
+    newcard=input(int('enter a 8 digit number: '))
+    newpass=input(int('enter a 3 digit PIN'))
+    newbal=input('what is the balance in the account?:')
+    print('Your new card number is '+newcard)'''
+
+
+
+#data13=newcard
+#data22=newpass
+
+
+
+balance=5000
+bal2=7000
+
+
+
+def atm():
+    global balance
+    while True:
+        option=input('select from the following option:\n 1.Display balance\n 2.withdraw\n 3.deposit\n 4.exit')
+        if option=='1':
+            print('your balance is',balance)
+        elif option=='2':
+            withdraw=int(input('enter the amount to withdraw'))
+            if withdraw<=balance:
+                balance=balance-withdraw
+                print('balance is',balance)
+            else:
+                print('insuff balance')
+        elif option=='3':
+            deposit=int(input('enter the amount to deposit'))
+            balance=balance+deposit
+            print('your balance is',balance)
+        elif option=='4':
+            break
+        else:
+            print('enter a valid option')
+        
+
+#if card_no==data13 and password==data22:
+    #balance==newbal
+
+if card_no==data12 and password==data21:
+    balance=7000
+
+if data1==card_no or data12 or data13 and data2==password or data21==password or data22==password :                 
+    atm()
+else:
+    print('specified does not exist')
+
+    
